@@ -40,6 +40,7 @@ public class ToDoListAction  extends ActionSupport {
 	}
 
 	public  String getToDoList() {
+		// gets todolist
 		return toDoList;
 	}
 
