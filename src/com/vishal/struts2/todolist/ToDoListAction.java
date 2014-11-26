@@ -48,7 +48,6 @@ public class ToDoListAction  extends ActionSupport {
 	}*/
 	
 	public void setToDoList(String toDoList) {
-		// sets toDoList
 		this.toDoList = toDoList ;
 	}
 
