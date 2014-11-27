@@ -33,8 +33,10 @@ public class ToDoListAction  extends ActionSupport {
 		setLengthOfArray(todoArray.size());
 		
 		// Add item to toDoList
-		toDoList = toDoList + todolistItem ;
+		toDoList = toDoList + "<BR>" + todolistItem ;
 		// DEBUG
+		
+		// + "<input type="submit" value="Delete">
 		System.out.println("toDoList: " + toDoList) ;
 		return "success" ;
 	}
@@ -44,13 +46,13 @@ public class ToDoListAction  extends ActionSupport {
 		return toDoList;
 	}
 
-	/*public static void setToDoList(String _toDoList) {
+	public static void setToDoList(String _toDoList) {
 		ToDoListAction.toDoList = _toDoList;
-	}*/
-	
-	public void setToDoList(String toDoList) {
-		this.toDoList = toDoList ;
 	}
+	
+	/*public void setToDoList(String toDoList) {
+		this.toDoList = toDoList ;
+	}*/
 
 	public String getTodolistItem() {
 		return todolistItem;
