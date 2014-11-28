@@ -32,9 +32,13 @@ public class ToDoListAction  extends ActionSupport {
 		// Not in user anymore.
 		setLengthOfArray(todoArray.size());
 		
+		String deleteButtonHtml = "<input type=\"submit\" value=\"Delete\">" ;
+
+		
 		// Add item to toDoList
-		toDoList = toDoList + "<BR>" + todolistItem ;
+		toDoList = toDoList + "<BR>"  + todolistItem + deleteButtonHtml;
 		// DEBUG
+		
 		
 		// + "<input type="submit" value="Delete">
 		System.out.println("toDoList: " + toDoList) ;

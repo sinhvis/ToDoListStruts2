@@ -12,7 +12,7 @@
 	
 	<%-- Your ToDoList item is <s:property value="todolistItem" />...! vishal --%>
 <%-- 	Your ToDoList item length is <s:property value="lengthOfArray" />.  --%>
-	ToDoList items: <s:property value="toDoList" />. <BR>
+	ToDoList items: <s:property escapeHtml="false" value="toDoList" />. <BR>
 	<a href="http://localhost:8080/ToDoListStruts2/">Add another item.</a>
 </body>
 </html>
