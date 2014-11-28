@@ -11,16 +11,8 @@ public class ToDoListAction  extends ActionSupport {
 	private static final long serialVersionUID = 1L;
 	private String todolistItem ;
 	private static ArrayList<String> todoArray  = new ArrayList<String>();
-	private int lengthOfArray ;
-	private static String toDoList = "";
+	private static String toDoListDisplay = "";
 	
-	public int getLengthOfArray() {
-		return lengthOfArray;
-	}
-
-	public void setLengthOfArray(int lengthOfArray) {
-		this.lengthOfArray = lengthOfArray;
-	}
 
 	public String execute() {
 		todoArray.add(todolistItem) ;
@@ -28,30 +20,30 @@ public class ToDoListAction  extends ActionSupport {
 		// DEBUG
 		System.out.println(todoArray);
 		
-		// For setting the length of the array.  
-		// Not in user anymore.
-		setLengthOfArray(todoArray.size());
-		
-		String deleteButtonHtml = "<input type=\"submit\" value=\"Delete\">" ;
-
-		
-		// Add item to toDoList
-		toDoList = toDoList + "<BR>"  + todolistItem + deleteButtonHtml;
-		// DEBUG
-		
+		// toDoListDisplay = toDoListDisplay + "<BR>"  + todolistItem + deleteButtonHtml;
 		
 		// + "<input type="submit" value="Delete">
-		System.out.println("toDoList: " + toDoList) ;
+		toDoListDisplay = convertArrayToString(todoArray) ;
+		System.out.println("toDoList: " + toDoListDisplay) ;
 		return "success" ;
 	}
+	
+	public String convertArrayToString(ArrayList<String> todoArray) {
+		String todoString  = "" ;
+		String deleteButtonHtml = "<input type=\"submit\" value=\"Delete\">" ;
+		for(String s: todoArray) {
+			todoString = todoString + "<BR>" + s + deleteButtonHtml ;
+		}
+		return todoString ;
+	}
 
-	public  String getToDoList() {
+	public  String getToDoListDisplay() {
 		// gets todolist
-		return toDoList;
+		return toDoListDisplay;
 	}
 
 	public static void setToDoList(String _toDoList) {
-		ToDoListAction.toDoList = _toDoList;
+		ToDoListAction.toDoListDisplay = _toDoList;
 	}
 	
 	/*public void setToDoList(String toDoList) {
@@ -65,6 +57,4 @@ public class ToDoListAction  extends ActionSupport {
 	public void setTodolistItem(String todolistItem) {
 		this.todolistItem = todolistItem;
 	}
-	
-
 }
