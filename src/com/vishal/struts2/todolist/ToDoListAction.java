@@ -14,6 +14,8 @@ public class ToDoListAction  extends ActionSupport {
 	
 	
 	public static ArrayList<String> getTodoArray() {
+		// DEBUG
+		System.out.println("DEBUG: getTodoArray called");
 		return todoArray;
 	}
 
@@ -46,7 +48,6 @@ public class ToDoListAction  extends ActionSupport {
 	}
 
 	public  String getToDoListDisplay() {
-		// gets todolist
 		return toDoListDisplay;
 	}
 

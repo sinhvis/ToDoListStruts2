@@ -15,8 +15,9 @@
 	<%-- ToDoList items: <s:property escapeHtml="false" value="toDoListDisplay" />. <BR> --%>
 	
 	ToDoList items: 
-	<s:iterator var="i" step="1" value="todoArray">
-		<s:property></s:property>
+<%-- 	<s:iterator var="i" step="1" value="todoArray"> --%>
+	<s:iterator value="todoArray">
+	<p>item is: <s:property/></p>
 	</s:iterator>
 	<a href="http://localhost:8080/ToDoListStruts2/">Add another item.</a>
 </body>
