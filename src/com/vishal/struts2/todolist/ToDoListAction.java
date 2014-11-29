@@ -11,6 +11,16 @@ public class ToDoListAction  extends ActionSupport {
 	private static final long serialVersionUID = 1L;
 	private String todolistItem ;
 	private static ArrayList<String> todoArray  = new ArrayList<String>();
+	
+	
+	public static ArrayList<String> getTodoArray() {
+		return todoArray;
+	}
+
+	public static void setTodoArray(ArrayList<String> todoArray) {
+		ToDoListAction.todoArray = todoArray;
+	}
+
 	private static String toDoListDisplay = "";
 	
 
@@ -20,14 +30,12 @@ public class ToDoListAction  extends ActionSupport {
 		// DEBUG
 		System.out.println(todoArray);
 		
-		// toDoListDisplay = toDoListDisplay + "<BR>"  + todolistItem + deleteButtonHtml;
-		
-		// + "<input type="submit" value="Delete">
 		toDoListDisplay = convertArrayToString(todoArray) ;
 		System.out.println("toDoList: " + toDoListDisplay) ;
 		return "success" ;
 	}
 	
+	// Do we need to move all this to Welcome.jsp
 	public String convertArrayToString(ArrayList<String> todoArray) {
 		String todoString  = "" ;
 		String deleteButtonHtml = "<input type=\"submit\" value=\"Delete\">" ;
@@ -46,6 +54,7 @@ public class ToDoListAction  extends ActionSupport {
 		ToDoListAction.toDoListDisplay = _toDoList;
 	}
 	
+	// This also works.  Ignore for now.
 	/*public void setToDoList(String toDoList) {
 		this.toDoList = toDoList ;
 	}*/
