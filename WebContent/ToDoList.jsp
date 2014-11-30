@@ -10,7 +10,7 @@
 <body>
 <h2>Struts2 - ToDoList Application</h2>
 <s:actionerror/>
-<s:form action="todolist.action" method="post">
+<s:form action="todolist" method="post">
 	<s:textfield name="todolistItem" key="label.todolistItem" size="20" />
 	<s:submit method="execute" key="label.todolistSubmit" align="center" />
 </s:form>

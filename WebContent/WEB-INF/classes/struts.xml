@@ -8,12 +8,12 @@
 	<constant name="struts.devMode" value="true" />
 	<constant name="struts.custom.i18n.resources" value="myapp" />
 	
-	<package name="default" extends="struts-default" namespace="/">
+	<package name="default" extends="struts-default" namespace="">
 		<action name="todolist" class="com.vishal.struts2.todolist.ToDoListAction">
 			<result name="success">Welcome.jsp</result>
 		</action>
-		<!-- <action name="delete" class="com.vishal.struts2.todolist.DeleteAction">
+		<action name="delete" class="com.vishal.struts2.todolist.DeleteAction">
 			<result name="success">Welcome.jsp</result>
-		</action> -->
+		</action>
 	</package>
 </struts>    

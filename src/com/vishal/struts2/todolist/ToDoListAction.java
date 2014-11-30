@@ -10,13 +10,11 @@ public class ToDoListAction  extends ActionSupport {
 	 */
 	private static final long serialVersionUID = 1L;
 	private String todolistItem ;
-	private static ArrayList<String> todoArray  = new ArrayList<String>();
+	public static ArrayList<String> todoArray  = new ArrayList<String>();
 	
 	
-	public static ArrayList<String> getTodoArray() {
-		// DEBUG
-		System.out.println("DEBUG: getTodoArray called");
-		return todoArray;
+	public  ArrayList<String> getTodoArray() {
+		return todoArray ;
 	}
 
 	public static void setTodoArray(ArrayList<String> todoArray) {
@@ -63,7 +61,7 @@ public class ToDoListAction  extends ActionSupport {
 	public String getTodolistItem() {
 		return todolistItem;
 	}
-
+	
 	public void setTodolistItem(String todolistItem) {
 		this.todolistItem = todolistItem;
 	}
