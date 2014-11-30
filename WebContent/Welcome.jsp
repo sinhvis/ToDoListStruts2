@@ -21,6 +21,7 @@
 			item is:
 			<s:property />
 			<s:form action="delete" method="post">
+				<s:textfield name="deleteIndex" key="label.todolistDeleteIndex" size="20" />
 				<s:submit method="execute" key="label.todolistDelete" align="center" />
 			</s:form>
 		</p>
