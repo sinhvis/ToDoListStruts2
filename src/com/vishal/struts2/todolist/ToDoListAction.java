@@ -35,20 +35,52 @@ public class ToDoListAction  extends ActionSupport {
 		// DEBUG
 		System.out.println("todolistItemLabel: " + todolistItemLabel + "\ntodolistItemDate: " + todolistItemDate 
 				+ "\ntodolistItemTime: " + todolistItemTime);
+		
+		
 		// First need to populate todolistItem
-		todolistItem.setLabel(todolistItemLabel) ;
+		/*todolistItem.setLabel(todolistItemLabel) ;
 		todolistItem.setDate(todolistItemDate);
 		todolistItem.setTime(todolistItemTime);
 		
 		todoArray.add(todolistItem) ;
 
 		// DEBUG
-		System.out.println(todoArray);
+		System.out.println(todoArray);*/
 
 		/*toDoListDisplay = convertArrayToString(todoArray) ;
 		System.out.println("toDoList: " + toDoListDisplay) ;*/
 
 		return "success" ;
+	}
+
+
+	public String getTodolistItemLabel() {
+		return todolistItemLabel;
+	}
+
+
+	public void setTodolistItemLabel(String todolistItemLabel) {
+		this.todolistItemLabel = todolistItemLabel;
+	}
+
+
+	public String getTodolistItemDate() {
+		return todolistItemDate;
+	}
+
+
+	public void setTodolistItemDate(String todolistItemDate) {
+		this.todolistItemDate = todolistItemDate;
+	}
+
+
+	public String getTodolistItemTime() {
+		return todolistItemTime;
+	}
+
+
+	public void setTodolistItemTime(String todolistItemTime) {
+		this.todolistItemTime = todolistItemTime;
 	}
 
 
