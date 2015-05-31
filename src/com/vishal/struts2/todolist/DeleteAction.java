@@ -9,10 +9,11 @@ public class DeleteAction extends ActionSupport {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
-	public static ArrayList<String> todoArray = ToDoListAction.todoArray ;
+
+	public static ArrayList<ToDoListItem> todoArray = ToDoListAction.todoArray ;
+
 	private String deleteIndex; 
-	
+
 	public String getDeleteIndex() {
 		return deleteIndex;
 	}
@@ -21,20 +22,17 @@ public class DeleteAction extends ActionSupport {
 		this.deleteIndex = deleteIndex;
 	}
 
-	
-	public  ArrayList<String> getTodoArray() {
+
+	public  ArrayList<ToDoListItem> getTodoArray() {
 		return todoArray ;
 	}
 
-	public static void setTodoArray(ArrayList<String> todoArray) {
+	public static void setTodoArray(ArrayList<ToDoListItem> todoArray) {
 		DeleteAction.todoArray = todoArray;
 	}
 
 	public String execute() {
-		
 		todoArray.remove(Integer.parseInt(deleteIndex)) ;
 		return "success" ;
 	}
-
-	
 }

@@ -1,3 +1,13 @@
+<!-- 
+1. Why is this needed? (Also, when does it get called?)
+2. What does it do?
+3. How does it work?
+
+Why?
+Displays the list of todo items.
+The todo items are shown with the corresponding Delete button, so that the user has a way of deleting the todo item.
+ -->
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
@@ -10,24 +20,19 @@
 <body>
 	<h2>Welcome</h2>
 
-	<%-- Your ToDoList item is <s:property value="todolistItem" />...! vishal --%>
-	<%-- 	Your ToDoList item length is <s:property value="lengthOfArray" />.  --%>
-	<%-- ToDoList items: <s:property escapeHtml="false" value="toDoListDisplay" />. <BR> --%>
-
 	ToDoList items:
-	<%-- 	<s:iterator var="i" step="1" value="todoArray"> --%>
-	<s:iterator value="todoArray">
+	<s:iterator value="todoArray" status="todoStatus">
 		<p>
 			item is:
 			<s:property />
 			<s:form action="delete" method="post">
-				<s:textfield name="deleteIndex" key="label.todolistDeleteIndex" size="20" />
+				<s:hidden name="deleteIndex" value="%{#todoStatus.index}" />
 				<s:submit method="execute" key="label.todolistDelete" align="center" />
+
 			</s:form>
 		</p>
 	</s:iterator>
 
-	<%-- <s:property value="todoArray" /> --%>
 	<a href="http://localhost:8080/ToDoListStruts2/">Add another item.</a>
 </body>
 </html>
