@@ -43,11 +43,17 @@ public class ToDoListAction  extends ActionSupport {
 
 
 	public static ArrayList<String> getExpOneList() {
+		// DEBUG
+		System.out.println("getExpOneList called!!!");
+		
 		return expOneList;
 	}
 
 
 	public static void setExpOneList(ArrayList<String> expOneList) {
+		// DEBUG
+		System.out.println("setExpOneList called!!!");
+		
 		ToDoListAction.expOneList = expOneList;
 	}
 
@@ -56,6 +62,9 @@ public class ToDoListAction  extends ActionSupport {
 		// DEBUG
 		System.out.println("todolistItemLabel: " + todolistItemLabel + "\ntodolistItemDate: " + todolistItemDate 
 				+ "\ntodolistItemTime: " + todolistItemTime);
+		
+		// DEBUG
+		System.out.println("Contents of expOneList:" + expOneList);
 		
 		ToDoListItem todolistItem = new ToDoListItem() ;
 		// Need to populate todolistItem
