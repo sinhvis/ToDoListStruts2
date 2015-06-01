@@ -18,6 +18,16 @@ public class ToDoListAction  extends ActionSupport {
 	
 	private ToDoListItem todolistItem ;
 	public static ArrayList<ToDoListItem> todoArray = new ArrayList<ToDoListItem>() ;
+//	public static ArrayList<String> expOneList = new ArrayList<String>() ;
+	
+//	private static ArrayList<String> expOneList = ArrayList.asList("Foo", "Bar", "Foo2", "Bar2");
+	
+	private static ArrayList<String> expOneList = new ArrayList<String>()
+			  {{ add("One");
+			    add("Two");
+			    add("Three");
+			  }};
+	
 	
 
 
@@ -32,6 +42,16 @@ public class ToDoListAction  extends ActionSupport {
 	private static String toDoListDisplay = "";*/
 
 
+	public static ArrayList<String> getExpOneList() {
+		return expOneList;
+	}
+
+
+	public static void setExpOneList(ArrayList<String> expOneList) {
+		ToDoListAction.expOneList = expOneList;
+	}
+
+
 	public String execute() {
 		// DEBUG
 		System.out.println("todolistItemLabel: " + todolistItemLabel + "\ntodolistItemDate: " + todolistItemDate 
@@ -44,7 +64,7 @@ public class ToDoListAction  extends ActionSupport {
 		todolistItem.setTime(todolistItemTime);
 		
 		// Add the current Item to the ArrayList
-		todoArray.add(todolistItem) ;
+		 todoArray.add(todolistItem) ;
 
 		/*toDoListDisplay = convertArrayToString(todoArray) ;
 		System.out.println("toDoList: " + toDoListDisplay) ;*/
