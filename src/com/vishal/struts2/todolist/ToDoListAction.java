@@ -18,6 +18,7 @@ public class ToDoListAction  extends ActionSupport {
 	
 	private ToDoListItem todolistItem ;
 	public static ArrayList<ToDoListItem> todoArray = new ArrayList<ToDoListItem>() ;
+	
 
 
 /*	public  ArrayList<String> getTodoArray() {
@@ -36,16 +37,14 @@ public class ToDoListAction  extends ActionSupport {
 		System.out.println("todolistItemLabel: " + todolistItemLabel + "\ntodolistItemDate: " + todolistItemDate 
 				+ "\ntodolistItemTime: " + todolistItemTime);
 		
-		
-		// First need to populate todolistItem
-		/*todolistItem.setLabel(todolistItemLabel) ;
+		ToDoListItem todolistItem = new ToDoListItem() ;
+		// Need to populate todolistItem
+		todolistItem.setLabel(todolistItemLabel);
 		todolistItem.setDate(todolistItemDate);
 		todolistItem.setTime(todolistItemTime);
 		
+		// Add the current Item to the ArrayList
 		todoArray.add(todolistItem) ;
-
-		// DEBUG
-		System.out.println(todoArray);*/
 
 		/*toDoListDisplay = convertArrayToString(todoArray) ;
 		System.out.println("toDoList: " + toDoListDisplay) ;*/

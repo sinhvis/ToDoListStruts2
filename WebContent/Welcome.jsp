@@ -21,6 +21,7 @@ The todo items are shown with the corresponding Delete button, so that the user 
 	<h2>Welcome</h2>
 
 	ToDoList items:
+	<!--  
 	<s:iterator value="todoArray" status="todoStatus">
 		<p>
 			item is:
@@ -32,6 +33,20 @@ The todo items are shown with the corresponding Delete button, so that the user 
 			</s:form>
 		</p>
 	</s:iterator>
+	-->
+	
+	<%-- <s:iterator value="todoArray">
+		<p>Property date: <s:property name="date" /></p>
+	</s:iterator> --%>
+	
+	<%-- <s:iterator value="todoArray" var="todolistItem">
+		<s:property value="todolistItem.date"/>
+	</s:iterator> --%>
+	
+	<s:iterator value="#todoArray" var="todolistItem">
+		<s:property value="todolistItem.date"/>
+	</s:iterator>
+
 
 	<a href="http://localhost:8080/ToDoListStruts2/">Add another item.</a>
 </body>
