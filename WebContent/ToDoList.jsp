@@ -28,6 +28,8 @@ Presents a textfield to the user, and a submit button.
 		<s:textfield name="todolistItemLabel" key="label.todolistItemLabel" size="20" />
 		<s:textfield name="todolistItemDate" key="label.todolistItemDate" size="20" />
 		<s:textfield name="todolistItemTime" key="label.todolistItemTime" size="20" />
+		<s:textfield name="todolistItemPriority" key="label.todolistItemPriority" size="20" />
+		<s:textfield name="todolistItemDescription" key="label.todolistItemDescription" size="20" />
 		<s:submit method="execute" key="label.todolistSubmit" align="center" />
 	</s:form>
 </body>
