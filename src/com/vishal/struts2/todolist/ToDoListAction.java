@@ -17,6 +17,7 @@ public class ToDoListAction  extends ActionSupport {
 	private String todolistItemTime ;
 	private String todolistItemPriority ;
 	private String todolistItemDescription ;
+	private boolean todolistItemDone ;
 		
 	private ToDoListItem todolistItem ;
 	public static ArrayList<ToDoListItem> todoArray = new ArrayList<ToDoListItem>() ;
@@ -87,6 +88,7 @@ public class ToDoListAction  extends ActionSupport {
 		todolistItem.setTime(todolistItemTime);
 		todolistItem.setPriority(todolistItemPriority);
 		todolistItem.setDescription(todolistItemDescription);
+		todolistItem.setDone(todolistItemDone);
 		
 		
 		// Add the current Item to the ArrayList
@@ -157,6 +159,18 @@ public class ToDoListAction  extends ActionSupport {
 	public void setTodolistItemDescription(String todolistItemDescription) {
 		this.todolistItemDescription = todolistItemDescription;
 	}
+
+
+	public boolean getTodolistItemDone() {
+		return todolistItemDone;
+	}
+
+
+	public void setTodolistItemDone(boolean todolistItemDone) {
+		this.todolistItemDone = todolistItemDone;
+	}
+	
+	
 	
 /*	public String getTodolistItem() {
 		return todolistItem;
