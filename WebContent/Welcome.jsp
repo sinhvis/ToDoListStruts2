@@ -21,31 +21,28 @@ The todo items are shown with the corresponding Delete button, so that the user 
 	<h2>Welcome</h2>
 
 	ToDoList items:
-	<!--  
+	<br />
+	<br />
+	
+	
+	
 	<s:iterator value="todoArray" status="todoStatus">
-		<p>
-			item is:
-			<s:property />
-			<s:form action="delete" method="post">
-				<s:hidden name="deleteIndex" value="%{#todoStatus.index}" />
-				<s:submit method="execute" key="label.todolistDelete" align="center" />
-
-			</s:form>
-		</p>
+		Todolist Item: <s:property value="label" /> <br />
+		Date: <s:property value="date" /> <br />
+		Time: <s:property value="time" /><br />
+		Priority: <s:property value="priority" /> <br />
+		Description: <s:property value="description" /> <br />
+		Done: <s:property value="done" /> <br />
+		<s:checkbox name="done" value="done" fieldValue="done" label="Done" />
+		
+		<s:form action="delete" method="post">
+			<s:hidden name="deleteIndex" value="%{#todoStatus.index}" />
+			<s:submit method="execute" key="label.todolistDelete" align="center" />
+		</s:form>
+		<br />
 	</s:iterator>
-	-->
 	
-	<%-- <s:iterator value="todoArray">
-		<p>Property date: <s:property name="date" /></p>
-	</s:iterator> --%>
-	
-	<%-- <s:iterator value="todoArray" var="todolistItem">
-		<s:property value="todolistItem.date"/>
-	</s:iterator> --%>
-	
-	<s:iterator value="#todoArray" var="todolistItem">
-		<s:property value="todolistItem.date"/>
-	</s:iterator>
+	<s:checkbox name="checkMe" value="true" fieldValue="true" label="Check Me for Testing" />
 
 
 	<a href="http://localhost:8080/ToDoListStruts2/">Add another item.</a>
