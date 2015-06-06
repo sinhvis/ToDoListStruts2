@@ -15,5 +15,8 @@
 		<action name="delete" class="com.vishal.struts2.todolist.DeleteAction">
 			<result name="success">Welcome.jsp</result>
 		</action>
+		<action name="done" class="com.vishal.struts2.todolist.DoneAction">
+			<result name="success">Welcome.jsp</result>
+		</action>
 	</package>
 </struts>    

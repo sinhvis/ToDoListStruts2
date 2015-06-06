@@ -23,8 +23,6 @@ public class ToDoListAction  extends ActionSupport {
 	public static ArrayList<ToDoListItem> todoArray = new ArrayList<ToDoListItem>() ;
 //	public static ArrayList<String> expOneList = new ArrayList<String>() ;
 	
-//	private static ArrayList<String> expOneList = ArrayList.asList("Foo", "Bar", "Foo2", "Bar2");
-	
 	private static ArrayList<String> expOneList = new ArrayList<String>()
 			  {{ add("One");
 			    add("Two");

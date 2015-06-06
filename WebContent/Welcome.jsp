@@ -43,7 +43,28 @@ The todo items are shown with the corresponding Delete button, so that the user 
 	</s:iterator>
 	
 	<s:checkbox name="checkMe" value="true" fieldValue="true" label="Check Me for Testing" />
+	
 
+
+<form id="formName" action="<?php echo $_SERVER['PHP_SELF'];?>" method="get">
+    <input type ="checkbox" name="cBox[]" value = "3" onchange="document.getElementById('formName').submit()">3</input>
+    <input type ="checkbox" name="cBox[]" value = "4" onchange="document.getElementById('formName').submit()">4</input>
+    <input type ="checkbox" name="cBox[]" value = "5" onchange="document.getElementById('formName').submit()">5</input>
+    <input type="submit" name="submit" value="Search" />
+</form>
+
+<s:checkbox label="checkbox test" name="checkboxField1" value="aBooleanValue" fieldValue="true"/>
+<br />
+HTML Checkbox Test: <input type="checkbox" name="checkboxField1" value="true" checked="checked" />
+
+<br />
+
+Another test struts checkbox (Check if this one shows up as checked)
+<s:checkbox label="checkbox test" name="checkboxField1" value="aBoolean" fieldValue="true"/>
+<br />
+Supposed HTML equivalent of the following:
+<input type="checkbox" name="checkboxField1" value="true" checked="checked" />
+<br />
 
 	<a href="http://localhost:8080/ToDoListStruts2/">Add another item.</a>
 </body>
