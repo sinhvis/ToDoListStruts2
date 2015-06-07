@@ -33,7 +33,10 @@ The todo items are shown with the corresponding Delete button, so that the user 
 		Priority: <s:property value="priority" /> <br />
 		Description: <s:property value="description" /> <br />
 		Done: <s:property value="done" /> <br />
-		<s:checkbox name="done" value="done" fieldValue="done" label="Done" />
+		<s:form action="done" method="post">
+			Done: <input type ="checkbox" name="done" value = "done" onchange="document.getElementById('formName').submit()"></input>
+		</s:form>
+		
 		
 		<s:form action="delete" method="post">
 			<s:hidden name="deleteIndex" value="%{#todoStatus.index}" />
@@ -64,6 +67,11 @@ Another test struts checkbox (Check if this one shows up as checked)
 <br />
 Supposed HTML equivalent of the following:
 <input type="checkbox" name="checkboxField1" value="true" checked="checked" />
+
+<br />
+<br />
+Supposedly correct checkBox
+<s:checkbox name="done" value="done" fieldValue="done" label="Done" />
 <br />
 
 	<a href="http://localhost:8080/ToDoListStruts2/">Add another item.</a>

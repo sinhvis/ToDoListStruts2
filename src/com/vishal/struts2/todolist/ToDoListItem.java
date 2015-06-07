@@ -3,7 +3,7 @@ package com.vishal.struts2.todolist;
 public class ToDoListItem {
 	
 	String label ;
-	boolean done = false ;
+	boolean done = true ;
 	String date ;
 	String time ;
 	String priority ;

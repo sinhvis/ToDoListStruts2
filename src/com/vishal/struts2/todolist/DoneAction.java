@@ -1,5 +1,6 @@
 package com.vishal.struts2.todolist;
 
+import java.util.ArrayList ;
 import com.opensymphony.xwork2.ActionSupport ;
 
 public class DoneAction extends ActionSupport {
@@ -7,6 +8,8 @@ public class DoneAction extends ActionSupport {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
+	public static ArrayList<ToDoListItem> todoArray = ToDoListAction.todoArray ;
 	boolean done ;
 
 	public boolean getDone() {
@@ -17,5 +20,8 @@ public class DoneAction extends ActionSupport {
 		this.done = done;
 	}
 	
-
+	public String execute() {
+		
+		return "success" ;
+	}
 }
