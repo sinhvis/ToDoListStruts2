@@ -74,7 +74,7 @@ public class ToDoListAction  extends ActionSupport {
 		// DEBUG
 		System.out.println("todolistItemLabel: " + todolistItemLabel + "\ntodolistItemDate: " + todolistItemDate 
 				+ "\ntodolistItemTime: " + todolistItemTime + "\ntodolistItemPriority: " + todolistItemPriority 
-				+ "\ntodolistItemDescription: " + todolistItemDescription) ;
+				+ "\ntodolistItemDescription: " + todolistItemDescription + "\ntodolistItemDone: " + todolistItemDone) ;
 		
 		// DEBUG
 		System.out.println("Contents of expOneList:" + expOneList);

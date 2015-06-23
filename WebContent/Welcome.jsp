@@ -34,7 +34,9 @@ The todo items are shown with the corresponding Delete button, so that the user 
 		Description: <s:property value="description" /> <br />
 		Done: <s:property value="done" /> <br />
 		<s:form action="done" method="post">
-			Done: <input type ="checkbox" name="done" value = "done" onchange="document.getElementById('formName').submit()"></input>
+			<s:checkbox label="Done" name="done" value="done" fieldValue="false"/>
+			<s:submit method="execute" key="label.Submit" align="center" />
+			
 		</s:form>
 		
 		
@@ -62,8 +64,8 @@ HTML Checkbox Test: <input type="checkbox" name="checkboxField1" value="true" ch
 
 <br />
 
-Another test struts checkbox (Check if this one shows up as checked)
-<s:checkbox label="checkbox test" name="checkboxField1" value="aBoolean" fieldValue="true"/>
+Another test struts checkbox (Check if this one shows up as checked). value = "true" means that it is checked.
+<s:checkbox label="checkbox test" name="checkboxField1" value="false" fieldValue="false"/>
 <br />
 Supposed HTML equivalent of the following:
 <input type="checkbox" name="checkboxField1" value="true" checked="checked" />
@@ -75,5 +77,8 @@ Supposedly correct checkBox
 <br />
 
 	<a href="http://localhost:8080/ToDoListStruts2/">Add another item.</a>
+	<br />
+	Noise
+	Done: <input type ="checkbox" name="done" value = "done" onchange="document.getElementById('formName').submit()"></input>
 </body>
 </html>
