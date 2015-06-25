@@ -15,7 +15,10 @@
 		<action name="delete" class="com.vishal.struts2.todolist.DeleteAction">
 			<result name="success">Welcome.jsp</result>
 		</action>
-		<action name="done" class="com.vishal.struts2.todolist.DoneAction">
+		<action name="checkBoxAction" class="com.vishal.struts2.todolist.CheckBoxAction" method="display">
+			<result name="none">Welcome.jsp</result>
+		</action>
+		<action name="resultAction" class="com.vishal.struts2.todolist.CheckBoxAction">
 			<result name="success">Welcome.jsp</result>
 		</action>
 	</package>

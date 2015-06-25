@@ -17,7 +17,6 @@ public class ToDoListAction  extends ActionSupport {
 	private String todolistItemTime ;
 	private String todolistItemPriority ;
 	private String todolistItemDescription ;
-	private boolean todolistItemDone ;
 		
 	private ToDoListItem todolistItem ;
 	public static ArrayList<ToDoListItem> todoArray = new ArrayList<ToDoListItem>() ;
@@ -74,7 +73,7 @@ public class ToDoListAction  extends ActionSupport {
 		// DEBUG
 		System.out.println("todolistItemLabel: " + todolistItemLabel + "\ntodolistItemDate: " + todolistItemDate 
 				+ "\ntodolistItemTime: " + todolistItemTime + "\ntodolistItemPriority: " + todolistItemPriority 
-				+ "\ntodolistItemDescription: " + todolistItemDescription + "\ntodolistItemDone: " + todolistItemDone) ;
+				+ "\ntodolistItemDescription: " + todolistItemDescription + "\n") ;
 		
 		// DEBUG
 		System.out.println("Contents of expOneList:" + expOneList);
@@ -86,7 +85,6 @@ public class ToDoListAction  extends ActionSupport {
 		todolistItem.setTime(todolistItemTime);
 		todolistItem.setPriority(todolistItemPriority);
 		todolistItem.setDescription(todolistItemDescription);
-		todolistItem.setDone(todolistItemDone);
 		
 		
 		// Add the current Item to the ArrayList
@@ -158,17 +156,6 @@ public class ToDoListAction  extends ActionSupport {
 		this.todolistItemDescription = todolistItemDescription;
 	}
 
-
-	public boolean getTodolistItemDone() {
-		return todolistItemDone;
-	}
-
-
-	public void setTodolistItemDone(boolean todolistItemDone) {
-		this.todolistItemDone = todolistItemDone;
-	}
-	
-	
 	
 /*	public String getTodolistItem() {
 		return todolistItem;

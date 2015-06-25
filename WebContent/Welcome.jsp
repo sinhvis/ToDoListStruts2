@@ -32,11 +32,12 @@ The todo items are shown with the corresponding Delete button, so that the user 
 		Time: <s:property value="time" /><br />
 		Priority: <s:property value="priority" /> <br />
 		Description: <s:property value="description" /> <br />
-		Done: <s:property value="done" /> <br />
-		<s:form action="done" method="post">
-			<s:checkbox label="Done" name="done" value="done" fieldValue="false"/>
-			<s:submit method="execute" key="label.Submit" align="center" />
-			
+		Done: CheckBox value: <s:property value="checkMe" />
+		<s:form action="resultAction" namespace="/">
+			<h2>
+			<s:checkbox name="checkMe" fieldValue="true" label="Done" />
+			</h2>
+			<s:submit value="submit" name="submit" />
 		</s:form>
 		
 		
